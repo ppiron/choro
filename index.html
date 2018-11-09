@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script> -->
+  <script src="https://unpkg.com/topojson@3"></script>
+  <title>Document</title>
+</head>
+<body>
+  <style type="text/css"> 
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1 {
+      font-size: 44px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    header {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .xax {
+      shape-rendering: crispEdges;
+    }
+    .xax text {
+      stroke: none;
+    }
+    .legendAxis {
+      shape-rendering: crispEdges;
+    }
+    .legendAxis path {
+      stroke: none;
+    }
+    .legendAxis line {
+      stroke: slategray;
+    }
+    #content {
+      shape-rendering: crispEdges;
+    }
+    #content .states path {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 1px;
+    }
+    #content .counties path {
+      /* fill: none; */
+      stroke: #fff;
+      /* stroke: none; */
+      stroke-width: 0.1px;
+    }
+  </style>
+
+
+  <header>
+    <h1 id='title'>
+      United States Educational Attainment
+    </h1>
+    <h2 id='description'>
+      Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)
+    </h2>
+  </header>
+  <div id='tooltip' class='hidden'>
+    <p><span id='county'>January</span> <span id='state'>1999</span> <span id="value">3.2</span></p>
+  </div>
+  <div id="content">
+    <svg width="960px" height="600px">
+      <g class="nation"></g>
+      <g class="states"></g>
+      <g class="counties"></g>
+      <g class="legend"></g>
+    </svg>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

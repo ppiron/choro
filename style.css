@@ -1,0 +1,22 @@
+.hidden {
+  display: none;
+}
+
+#tooltip {
+  /* box-sizing: border-box; */
+  position: absolute;
+  /* width: 80px; */
+  line-height: 15px;
+  min-height: 15px;
+  /* height: 20px; */
+  padding: 5px;
+  text-align: center;
+  background-color: rgba(233, 210, 0, 0.65);
+  pointer-events: none;
+  font-size: 80%;
+  font-weight: 600;
+}
+
+#tooltip p {
+  margin: 0;
+}
